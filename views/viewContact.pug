@@ -1,0 +1,22 @@
+extends layout
+
+block content
+
+  h1= title
+
+  form(action= 'updateRow' method= 'get')
+
+      each val in data
+        .row
+         .input-field.col.s6
+            input#id.validate( type= 'hidden', name= '_id' value = val._id)
+        .row
+          .input-field.col.s6
+            input#contactName.validate( type= 'text', name= 'contactName',value= val.name )
+        .row
+         .input-field.col.s6
+            
+            input#phoneNo.validate( type= 'text', name= 'phoneNo',value = val.PhoneNo)
+        
+        .row
+          button.btn(type= 'submit') Update

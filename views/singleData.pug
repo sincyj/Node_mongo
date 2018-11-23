@@ -1,0 +1,20 @@
+extends layout
+
+block content
+	
+	each val in data
+		.row
+			.col.s12.m7
+				.card-panel.teal.lighten-2.z-depth-5
+					.card-image
+						img(src ='C:/images/image1.png')
+						span.card-title.white-text
+							h4 #{val.superhero}
+					.card-content.white-text
+						.card-title
+							h6 first appeared in #{val.first_appearance}
+						p Character Id: #{val.id}
+						p Real Name : #{val.alter_ego}
+						p Publisher : #{val.publisher}
+						
+					
